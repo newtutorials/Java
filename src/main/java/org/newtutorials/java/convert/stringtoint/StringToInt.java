@@ -17,5 +17,13 @@ public class StringToInt {
         primitive = integer;
         integer = primitive;
 
+        // let try to get an exception
+        String notNumber ="123NA";
+
+        try {
+            integer = Integer.parseInt(notNumber);
+        } catch (NumberFormatException nfe){
+            nfe.printStackTrace();
+        }
     }
 }
